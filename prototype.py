@@ -1,6 +1,8 @@
 import time
-tasks = []
+from quotes import Motivation
 
+motivate = Motivation()
+tasks = []
 def add_task():
     task = input("What do you want to work on>?")
     if task:
@@ -27,7 +29,7 @@ def start_timer():
     for i in range(25, 0, -1):
         print(f"{i} minutes remaining...", end='\r')
         time.sleep(60)
-        # Insert quote function here
+        motivate.get_motivation()
     print("\nTime's up! Take a 5-minute break.")
     for i in range(5, 0, -1):
         print(f"{i} minutes remaining for break...", end='\r')
